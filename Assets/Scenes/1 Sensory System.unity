@@ -598,7 +598,8 @@ PrefabInstance:
       value: NPC With Sight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5198147227415074761, guid: 666efcc59fe1eb848b6845267c18179b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 666efcc59fe1eb848b6845267c18179b, type: 3}
