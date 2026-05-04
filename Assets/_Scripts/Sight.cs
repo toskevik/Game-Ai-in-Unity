@@ -44,11 +44,12 @@ public class Sight : SenseBase
         var colorToUse = idleColor;
         if (Vector3.SqrMagnitude(_rayDirection) < viewDistance * viewDistance)
         {
-            if (Vector3.Angle(_rayDirection, transform.forward) < fieldOfView / 2)
+            if (Vector3.Angle(_rayDirection, transform.forward) < fieldOfView * 0.5f)
             {
                     colorToUse = alertColor;
-                    // Fire projectile every time a player is detected in sight
-                    _gunController.FireGun(_playerBodyTransform);
+                    // Fire projectile every time a player is detected in sight, if the NPC is holding a gun
+                    if (_gunController != null)
+                        _gunController.FireGun(_playerBodyTransform);
             }
         }
         FlipColor(colorToUse);
